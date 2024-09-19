@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .head {
+            /* border: 1px solid black; */
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+            
+        }
+        .logo {
+            width: 50px;
+            margin-left: 50px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul {
+            display: flex;
+            gap: 55px;
+            
+        }
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        nav ul li a:hover {
+            color: #007231
+        }
+        nav ul li input {
+            border-radius:5px;
+            padding: 5px;
+            border: none;
+            width: 190px;
+            margin-left: 220px;
+            align-items: center;
+            height: 20px;
+            padding-left: 7px;
+        }
+        .small {
+            width: 28px;
+            align-items: center;
+        }
+        .greenbox {
+            width: 100%;
+            height: 80px;
+            background-color: #1e3932;
+            margin-top: -20px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        }
+        .coffie {
+            width:95%;
+            height: 490px;
+            margin-left: 32px;
+            margin-top: 30px;
+            border-radius: 30px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+        }
+        .know {
+            margin-left: 34px; 
+            height: 30px; 
+            border: none;
+            justify-content:space-between;
+            margin-bottom: 20px;
+        }
+        .know:hover {
+            background-color: #1e3932;
+            color: white;
+            border-radius: 10px;
+        }
+        .category {
+            width: 100%;
+            height: 200px;
+            /* border: 1px solid black; */
+            display: flex;
+            /* padding: 15px; */
+            box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+        }
+        .pic {
+            max-width:  57%;
+            height:auto;
+            padding: 15px;
+            border-radius: 100px;
+            margin-left: 17px;
+            
+        }
+        .co-name{
+            margin-top: -5px;
+            margin-left: 30%
+        }
+        
+        .image-container img {
+            width: 100%; /* Make the image take full width of the container */
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
+
+        .image-container img:hover {
+            transform: scale(1.2); /* Zoom the image by 20% on hover */
+        }
+    </style>
+    <title>Star Bucks</title>
+</head>
+<body>
+    <header class="head">
+        <div >
+            <img
+            class="logo"
+            src="https://www.starbucks.in/assets/icon/logo.png"/>
+        </div>
+        <nav >
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gift</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Pay</a></li>
+                <li><a href="#">Store</a></li>
+
+                <li><input type="" placeholder="Looking for something specific?"/></li>
+                <li><img class="small"src="https://icon-library.com/images/user-login-icon/user-login-icon-11.jpg"/><a href="#"></a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <!-- section 1 -->
+    <div class="greenbox">
+       <h2 style="color: white; font-weight: 300; padding: 20px; padding-left: 40px;">Starbucks</h2>
+    </div>
+    <!-- section 2 -->
+     <div>
+        <img 
+        class="coffie"
+        src="https://cdn.phonebooky.com/blog/wp-content/uploads/2017/07/05084938/sbjuly.jpg"/>
+     </div>
+     <button class="know" type="text"><a href="#"></a>Know More</button>
+     <br>
+     <h1 style="margin-left: 35px;"> Handcrafted Curations</h1>
+     <div class="category">
+        
+         <div class="image-container">
+            <img 
+            class="pic"
+            src="https://www.starbucks.in/assets/icon/Bestseller.webp"/>
+            <h4 class="co-name">Bestseller</h4>
+         </div>
+         <div class="image-container">
+            <img 
+            class="pic"
+            src="https://www.starbucks.in/assets/icon/Drinks.webp"/>
+            <h4 class="co-name">Drinks</h4>
+         </div >
+         <div class="image-container">
+            <img 
+            class="pic"
+            src="https://www.starbucks.in/assets/icon/Food.webp"/>
+            <h4 style="margin-top: -5px;margin-left: 35%">Food</h4>
+         </div >
+         <div class="image-container">
+            <img 
+            class="pic"
+            src="https://www.starbucks.in/assets/icon/Merchandise.webp"/>
+            <h4 style="margin-top: -5px;margin-left: 23%">Merchandise</h4>
+         </div >
+         <div class="image-container">
+            <img 
+            class="pic"
+            src="https://www.starbucks.in/assets/icon/CoffeeAtHome.webp"/>
+            <h4 style="margin-top: -5px;margin-left: 20%">Coffee At Home</h4>
+         </div>
+         <div class="image-container">
+            <img 
+            class="pic"
+            src="https://www.starbucks.in/assets/icon/ReadyToEat.webp"/>
+            <h4 style="margin-top: -5px;margin-left: 23%">Ready to Eat</h4>
+         </div>
+     </div>
+</body>
+</html>

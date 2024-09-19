@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .heading {
+            width: 100%;
+            height: 80px;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo {
+            width: 200px;
+            padding: 20px;
+        }
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            padding: 15px;
+            
+            
+        }
+        nav ul li {
+            list-style-type: none;
+            
+        }
+        nav ul li select {
+            border: none;
+            
+            
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+        button {
+            color: rgb(2, 2, 2);
+            margin-right: 30px;
+            padding: 10px;
+            background-color: #ffe371;
+            font-weight: bold;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: #f5c70c;
+           
+            
+            
+        }
+        .main-box {
+            width: 100%;
+            height: auto;
+            /* border: 1px solid black; */
+            display: flex;
+            margin: auto ;
+            gap: 18px;
+            margin-bottom: 69px;
+        }
+        .main-head {
+            font-size: 45px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .three-box {
+            /* border: 1px solid black; */
+            width: 100%;
+            height: auto;
+            margin-left: 40px;
+            margin-right: 20px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            border-radius: 6px;
+            margin-top: 40px;
+        }
+        .img {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .para {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        .fresh {
+            margin-left: 55px;
+            
+        }
+        .dif-box {
+            width: 100%;
+            height: auto;
+            /* border: 1px solid black; */
+            display: flex;
+            gap: 5px;
+            padding: 10px;
+            margin: auto;
+            /* margin-right: 30px; */
+            /* margin-left: 30px; */
+        }
+        .img-box {
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            width: 100%;
+            height: auto;
+            margin-right: 40px;
+            margin-left: 40px;
+            border-radius: 10px;
+            
+            
+        }
+        .img-bed {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .merging {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+        .container {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.yellow {
+    background-color: #ffdd57; /* Yellow background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    height: 110vh;
+}
+        .form-box {
+            text-align: center;
+        }
+
+        .form-box h2 {
+            margin-bottom: 10px;
+        }
+
+        .form-box p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .form-box form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-box label {
+            text-align: left;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .form-box input {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-box button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-box button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-box .terms {
+            font-size: 12px;
+            color: #777;
+        }
+
+        .form-box .terms a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .form-box .terms a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: black;
+            width: 100%;
+            height: 80px;
+            margin-top: -20px;
+
+        }
+        .text {
+            color: white;
+            text-align: center;
+            padding-top: 30px;
+        }
+        
+    </style>
+    <title>KreditBee</title>
+</head>
+<body>
+    <header class="heading">
+        <div>
+            <img
+            class="logo"
+            src="https://ik.imagekit.io/krazybee/kreditbee_in/logo_horizontal_BNqOuZWg_.svg"/>
+        </div>
+        <nav>
+            <ul>
+                <li><select>
+                    <option value="Loans">Loans</option>
+                </select></li>
+                <li><select>
+                    <option value="Loans">Calculators</option>
+                </select></li>
+                <li><a href="#">Credit Report</a></li>
+                <li><a href="#">Refer & Earn</a></li>
+                <i class="fa fa-heart"></i>
+                <i class="fa fa-shopping-cart"></i>
+                <li><button id="button">Sign up</button></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <main>
+        <h1 class="main-head">Why Choose KreditBee?</h1>
+        <div class="main-box">
+            <div class="three-box">
+                <img
+                class="img"
+                src="https://ik.imagekit.io/krazybee/kreditbee_in/banners/New_Web/ic-1.svg"/>
+                <h3 class="para">Lower Interest Rates</h3>
+                <p class="para">Get loans for multiple purposes at lower interest rates to suit your needs</p>
+            </div>
+            <div class="three-box">
+                <img
+                class="img"
+                src="https://ik.imagekit.io/krazybee/kreditbee_in/banners/New_Web/ic-2.svg"/>
+                <h3 class="para">Fast Processing and Disbursal</h3>
+                <p class="para">Apply online, check your eligibility and get money directly in your bank in 10 minutes</p>
+            </div>
+            <div class="three-box">
+                <img
+                class="img"
+                src="https://ik.imagekit.io/krazybee/kreditbee_in/banners/New_Web/ic-3.svg"/>
+                <h3 class="para">Easy Repayment Options</h3>
+                <p class="para">Repay the loan amount in easy EMI with flexible tenure options</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <h2 class="fresh">Fresh from the blog</h2>
+        <div class="dif-box">
+           <div class="img-box">
+            <img
+            class="img-bed"
+            src="https://cdn.kiwicollection.com/media/room_images/PR176182/xl/176182-superior-room-403-6497-jg-jul-19.jpg"/>
+            <p class="merging">Shopping Guides</p>
+            <h2 class="merging">9 Comfy Throws for Cosy Autumn Vibes</h2>
+            <p class="merging">Embrace the snuggling season with stylish throws that will warm your hearts</p>
+           </div>
+           <div class="img-box">
+            <img
+            class="img-bed"
+            src="https://ijrorwxhkkoklo5p.ldycdn.com/cloud/loBpkKojlkSRqijqokqniq/zhutu3.jpg"/>
+            <p class="merging">Shopping Guides</p>
+            <h2 class="merging">14 Beautiful Bags Thar Express Your Unique Style</h2>
+            <p class="merging">Amp up your fashion game with bags that perfectly match your aesthetic</p>
+           </div>
+           <div class="img-box">
+            <img
+            class="img-bed"
+            src="https://th.bing.com/th/id/OIP.kjX6QIgJIUnMFvvMOxLsYQHaLG?rs=1&pid=ImgDetMain"/>
+            <p class="merging">Shopping Guides</p>
+            <h2 class="merging">The Best Gift Ideas For Kids of All Ages</h2>
+            <p class="merging">Shop the sweetest surprises for all little ones in your family-these gifts for kids will definitely earn you some browine points</p>
+           </div>
+        </div>
+        <main class="yellow">
+            <div class="container">
+                <div class="form-box">
+                    <h2>Create Account</h2>
+                    <p>Already have an account? <a href="#">Sign in</a></p>
+        
+                    <form action="#" method="post">
+                        <label for="fullname">Full Name *</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter full name" required>
+        
+                        <label for="email">Email address *</label>
+                        <input type="email" id="email" name="email" placeholder="Enter email address" required>
+        
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your whatsapp number" required>
+        
+                        <label for="referral">Referral Code (Optional)</label>
+                        <input type="text" id="referral" name="referral" placeholder="Enter referral code">
+        
+                        <button  type="submit">Submit</button>
+                    </form>
+        
+                    <p class="terms">
+                        By signing up, I accept the <a href="#">Terms of Service</a> and acknowledge the <a href="#">Privacy Policy</a>.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p class="text">COPYRIGHT @ETSY PRIVATE LIMITED.ALL RIGHTS RESERVED</p>
+        </footer>
+        
+    </main>
+    
+</body>
+</html>

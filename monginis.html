@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+            .head {
+        width: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        position: fixed;
+        background-color: white;
+        top: 0;
+    }
+    .logo {
+        width: 145px;
+        padding-left: 50px;
+        align-items: center;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+    .logo:hover {
+        transform: scale(0.9); 
+
+    }
+    nav ul {
+        display: flex;
+        
+    }
+    nav ul li {
+        list-style-type: none;
+        margin-right: 40px;
+        
+    }
+    nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    nav ul li a:hover {
+        color: #1860b9;
+    }
+    nav ul li select {
+        border: none;
+        font-size: 16.5px;
+        font-weight: bold;
+    }
+    nav ul li select:hover {
+        color: #1860b9;
+    }
+    nav {
+        margin-right: 30px;
+    }
+    .banner {
+        width: 100%;
+        margin-top: 100px;
+    }
+    .banner-img {
+        width: 98%;
+        padding: 10px ;
+    }
+    span {
+        color: #ee2485;
+        margin-left: 10px;
+    }
+    .center {
+        font-family: "Playpen Sans", cursive;
+        font-optical-sizing: auto;
+        font-weight: 300px;
+        font-style: normal;
+        text-align: center;
+        font-size: 35px;
+        margin-top: 40px;
+        font-weight: bold;
+    }
+    .box-two {
+        width: 99%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        padding-left: 10px;
+    }
+    .batton-center {
+        margin-left: 38%;
+        padding: 10px;
+        margin-top: 3%;
+        background-color: #eb268f;
+        color: white;
+        border: none;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .batton-center:hover {
+        background-color: #c20067;
+    }
+    .center-1 {
+        font-family: "Playpen Sans", cursive;
+        font-optical-sizing: auto;
+        font-weight: 300px;
+        font-style: normal;
+        text-align: center;
+        font-size: 35px;
+        padding-top: 40px;
+        font-weight: bold;
+    }
+    .box-2 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: #e2def5;
+        margin-top: -24px;
+        height: 300px;
+    }
+    .box-2 >div {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 10%;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        height: 200px;
+        cursor: pointer;
+    }    
+    @media (max-width:800px){
+        .box-2 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        background-color: #e2def5;
+        margin-top: -24px;
+        height: auto;
+    }
+    .box-four {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+    }
+    .main-boxing {
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        margin-bottom: 15px;
+    }
+      
+    
+    }
+    .two-cake-img {
+        width: 200px; 
+        transition: transform 0.3s ease;
+    }
+    .two-cake-img:hover {
+        transform: scale(1.4); 
+    }
+    .main-boxing {
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        margin-bottom: 15px;
+    }
+    .two-points {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+
+    }
+    .new-button{
+        margin-left: 38%;
+        padding: 10px;
+        margin-top: 3%;
+        background-color: #eb268f;
+        color: white;
+        border: none;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        height: 60px;
+        width: 90px;
+        
+    }
+    .new-button:hover {
+        background-color: #c20067;
+    }
+    .box-four {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .box-four > div {
+        margin-left: 40px;
+    }
+    .img-radius {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+    }
+    .img-radius:hover {
+        transform: scale(0.9); 
+
+    }
+    .cake-head {
+        font-size: 15px;
+        margin-left: 29px;
+    }
+    .main-purple {
+        width: 100%;
+        background-color: #e2def5;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        margin-bottom: 15px;
+    }
+    footer{
+        background-color: #e1dfea;
+        width: 100%;
+        height: 400px;
+        margin-top: -10px;
+    }
+    .footer-topdiv{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+
+    .social {
+        width: 100%;
+        cursor: pointer;
+    }
+    
+    .fot-box {
+        width: 50px;
+    }
+    .face{
+        width: 75%;
+        cursor: pointer;
+    }
+    .info-footer {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    
+        .footer-topdiv {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .fot-box {
+            flex: 1;
+            margin: 10px;
+        }
+        .social, .face {
+            cursor: pointer;
+            width: 40px;
+        }
+        .info-footer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+    
+   
+    </style>
+    <title>MONGINIS</title>
+</head>
+<body>
+    <header>
+    <div class="head">
+        <img 
+        class="logo"
+        src="https://www.monginis.net/wp-content/uploads/2022/06/cropped-NEW-LOGO.png"/>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Products</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Our History</a></li>
+                <li><select>
+                    <option >Become a Franchise</option>
+                </select></li>
+                <li><a href="#">Blogs</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <main>
+        <div class="banner">
+            <img
+            class="banner-img"
+            src="https://www.monginis.net/wp-content/uploads/2024/09/Moniginis-Banner-1512-X-475-14.png"/>
+        </div>
+        <h1 class="center">Bring A Box Of<span>Happiness Today</span> </h1>
+        <br>
+        <div class="box-two">
+            <div>
+                <img
+                style="width: 100%; border-radius: 10px;"
+                src="https://www.monginis.net/wp-content/uploads/elementor/thumbs/Delivery-web-01-2-prb2tuv0b8xzqq9p0zvt9xnwjdfxugrk30a96dd31e.png"/>
+                <button class="batton-center">Order Online</button>
+            </div>
+            <div>
+                <img
+                style="width: 100%; border-radius: 10px;"
+                src="https://www.monginis.net/wp-content/uploads/2022/07/Banner-web-1.png"/>
+                <button class="batton-center">Visit Your Nearest Store</button>
+            </div>
+        </div>
+        <div style="width: 100%;background-color: #e2def5;">
+        <h1 class="center-1">Shop By <span>Bestseller Categories</span> </h1>
+        </div>
+        <div class="box-2">
+            <div>
+                <img
+                class="two-cake-img"
+                src="https://static.vecteezy.com/system/resources/previews/032/547/399/original/happy-birthday-cake-with-candles-ai-generative-free-png.png"/>
+                <h1>Birthday Surprises
+                    <button class="batton-center ">View all</button> 
+                </h1>
+                
+            </div>
+            <div >
+                <img
+                class="two-cake-img"
+                src="https://momgemin.co.tz/wp-content/uploads/2024/02/cake-1.png"/>
+                <h1>Anniversary Surprises
+                    <button class="batton-center ">View all</button>
+                </h1>
+            </div>
+        </div>
+        <div class="main-boxing">
+            <div class="two-points">
+                <h1 class="center" >Shop by<span>Cake</span></h1>
+                <button class="new-button">View all</button>
+            </div>
+            <div class="box-four">
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://static.wixstatic.com/media/29f7da_928532c4575f494392985ceeff84b959~mv2.jpg/v1/fill/w_980,h_1473,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/29f7da_928532c4575f494392985ceeff84b959~mv2.jpg"/>
+                    <h1 class="cake-head">TALL AND FANCY</h1>
+                </div>
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://th.bing.com/th/id/OIP.wW8zvee9Rqes73BFQV6ejgHaLH?w=640&h=960&rs=1&pid=ImgDetMain"/>
+                    <h1 style="margin-left: 40px;font-size: 15px;">EXOTIC CAKES</h1>
+                </div>
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://th.bing.com/th/id/OIP.ehQuaphSyScKe_-CW_0PBAAAAA?w=325&h=460&rs=1&pid=ImgDetMain"/>
+                    <h1 class="cake-head">PREMIUM CAKES</h1>
+                </div>
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://i.weddingomania.com/2017/05/04-semi-naked-wedding-cake-with-salted-caramel-drip-fresh-figs-grapes-and-blackberries.jpg"/>
+                    <h1 class="cake-head">DESIGNER CAKES</h1>
+                </div>
+
+            </div>
+        </div>
+        <div class="main-purple">
+            <div class="two-points">
+                <h1 class="center" >Shop by<span>Chocolates</span></h1>
+                <button class="new-button">View all</button>
+            </div>
+            <div class="box-four">
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://img.freepik.com/premium-photo/world-chocolate-day-chocolate-advertisement_882954-53319.jpg"/>
+                    <h1 class="cake-head">CHOCOLATE BARS</h1>
+                </div>
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://www.thebigkitchen.co.uk/wp-content/uploads/2018/08/99022473.jpg"/>
+                    <h1 class="cake-head">CHOCO BOUQUETS</h1>
+                </div>
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://i.etsystatic.com/26582960/r/il/a9a511/3044786499/il_fullxfull.3044786499_4mf9.jpg"/>
+                    <h1 class="cake-head">ROSE BOUQUET</h1>
+                </div>
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://th.bing.com/th/id/OIP.SFAagURngtZv5B-yL62Q3wHaHa?rs=1&pid=ImgDetMain"/>
+                    <h1 class="cake-head">VALENTINE CHOCOLATE</h1>
+                </div>
+            </div>
+        </div>
+        <div class="main-boxing">
+            <div class="two-points">
+                <h1 class="center" >Shop by<span>Savories</span></h1>
+                <button class="new-button">View all</button>
+            </div>
+            <div class="box-four">
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://th.bing.com/th/id/OIP.C5U-Px6lzOA6ae0sVCelqQHaHa?rs=1&pid=ImgDetMain"/>
+                    <h1 style="margin-left: 55px;font-size: 15px;">BURGERS</h1>
+                </div>
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://assets.teenvogue.com/photos/5ab665d06d36ed4396878433/master/pass/GettyImages-519526540.jpg"/>
+                    <h1 style="margin-left: 70px;font-size: 15px;">PIZZA</h1>
+                </div>
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://i.pinimg.com/originals/ec/d3/ac/ecd3ac29bd5fff354ea0b3e775040f54.jpg"/>
+                    <h1 style="margin-left: 70px;font-size: 15px;">ROLLS</h1>
+                </div>
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://tastefulllife.com/wp-content/uploads/2020/07/cheetah-shirt-16-1024x550.jpg"/>
+                    <h1 class="cake-head">PATTIES & PUFFS</h1>
+                </div>
+            </div>
+        </div>
+        <div class="main-purple">
+            <div class="two-points">
+                <h1 class="center" >Shop by<span>Pastry</span></h1>
+                <button class="new-button">View all</button>
+            </div>
+            <div class="box-four">
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://justbakedcake.com/wp-content/uploads/2020/09/Chocochip-pastry.jpg"/>
+                    <h1 style="margin-left: 15px;font-size: 15px;">FRESH CREAM PASTRIES</h1>
+                </div>
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://www.monginis.net/wp-content/uploads/elementor/thumbs/2021-12-04_16_06_16_devils-delight-pastry-pr0niuq3fznm5zyf6tfto8z2j370undj257sb34pn4.jpg"/>
+                    <h1 style="margin-left: 17px;font-size: 15px;">CHOCOLATE PASTRIES</h1>
+                </div>
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://www.monginis.net/wp-content/uploads/elementor/thumbs/2021-05-27_16_14_08_Cherry-chocolate-mousse-cup-pr0nj52bj61rppjeifwpxod52bs27bikrke4l4pdqo.jpg"/>
+                    <h1 style="margin-left: 45px;font-size: 15px;">CUP PASTRIES</h1>
+                </div>
+                <div>
+                    <img
+                    class="img-radius"
+                    src="https://www.monginis.net/wp-content/uploads/elementor/thumbs/1622273916612_41-scaled-pr0s5rwb3u5px3hrhgxqymkw7egkrn1j0buxd1muog.jpg"/>
+                    <h1 class="cake-head">SWISS MISS PASTRY</h1>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="footer-topdiv">
+        <img
+        src="https://www.monginis.net/wp-content/uploads/2022/06/cropped-NEW-LOGO-300x66.png"/>
+        <div style="display:grid;grid-template-columns: repeat(4,1fr);gap: 10px;">
+            <div class="fot-box">
+            <img
+            class="face"
+            src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-1-2.png"/>
+            </div>
+            <div class="fot-box">
+            <img
+            class="social"
+            src="https://logos-world.net/wp-content/uploads/2020/04/Twitter-Emblem.png"/>
+            </div>
+            <div class="fot-box">
+            <img
+            class="social"
+            src="https://www.freeiconspng.com/uploads/youtube-logo-png-hd-14.png"/>
+            </div>
+            <div class="fot-box">
+            <img
+            class="social"
+            src="https://logolook.net/wp-content/uploads/2021/06/Instagr%D0%B0m-Logo.png"/>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="footer-topdiv">
+            <div class="fot-box">
+                <h2>Follow us</h2>
+                <p>FaceBook</p>
+                <p>Instagram</p>
+                <p>Twitter</p>
+                
+            </div>
+
+            <div class="fot-box">
+                <h2>Contact Us</h2>
+                <p>Email: support@monginis.com</p>
+                <p>Phone: +91-1234567890</p>
+            </div>
+
+            <div class="fot-box">
+                <h2>Quick Links</h2>
+                <p><a href="#">FAQs</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </div>
+
+    </footer>
+
+</body>
+</html>

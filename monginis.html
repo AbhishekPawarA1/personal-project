@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
     <style>
-            .head {
+        /* CSS */
+
+    .head {
         width: 100%;
         /* border: 1px solid black; */
         display: flex;
@@ -129,28 +131,7 @@
         height: 200px;
         cursor: pointer;
     }    
-    @media (max-width:800px){
-        .box-2 {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        background-color: #e2def5;
-        margin-top: -24px;
-        height: auto;
-    }
-    .box-four {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-
-    }
-    .main-boxing {
-        width: 100%;
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-        margin-bottom: 15px;
-    }
-      
     
-    }
     .two-cake-img {
         width: 200px; 
         transition: transform 0.3s ease;
@@ -264,13 +245,79 @@
             gap: 20px;
             margin-top: 20px;
         }
+        @media (max-width:800px){
+        .box-2 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        background-color: #e2def5;
+        margin-top: -24px;
+        padding-bottom: 20px;
+        height: auto;
+    }
+    .box-four {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
 
+    }
+    .main-boxing {
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        margin-bottom: 15px;
+    }
+    .img-radius {
+        border-radius: 50%;
+        width: 170px;
+        height: 170px;
+        transition: transform 0.2s ease;
+        cursor: pointer;
+    }
+    .logo {
+        width: 80px;
+        padding-left: 50px;
+        align-items: center;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+    nav ul {
+        display: flex;
+        
+    }
+    nav ul li {
+        list-style-type: none;
+        margin-right: 20px;
+        
+    }
+    nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    nav ul li a:hover {
+        color: #1860b9;
+    }
+    nav ul li select {
+        border: none;
+        font-size: 11.5px;
+        font-weight: bold;
+    }
+    nav ul li select:hover {
+        color: #1860b9;
+    }
+    nav {
+        margin-right: 30px;
+    }
+    
+    
+    }
     
    
     </style>
     <title>MONGINIS</title>
 </head>
 <body>
+    <!-- nav bar  -->
     <header>
     <div class="head">
         <img 
@@ -290,6 +337,7 @@
         </nav>
     </div>
     </header>
+    <!-- banner  -->
     <main>
         <div class="banner">
             <img
@@ -465,6 +513,8 @@
         </div>
         
     </main>
+    <!-- footer -->
+
     <footer>
         <div class="footer-topdiv">
         <img

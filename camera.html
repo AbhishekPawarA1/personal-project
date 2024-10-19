@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Permission Example</title>
+</head>
+<body>
+
+<h1>Camera Permission Request</h1>
+<button id="startCamera">Turn On Camera</button>
+<video id="video" width="640" height="480" autoplay></video>
+
+<script>
+    document.getElementById('startCamera').addEventListener('click', async () => {
+        try {
+            // Request access to the camera
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            // Get the video element
+            const video = document.getElementById('video');
+            // Set the video source to the stream
+            video.srcObject = stream;
+        } catch (error) {
+            console.error("Error accessing the camera: ", error);
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting</title>
+    <style>
+        .img {
+            width: 300px;
+        }
+        button {
+            padding: 5px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <img
+        class="img"
+        src="https://stat5.bollywoodhungama.in/wp-content/uploads/2023/07/Badshah_Honey_Singh.jpeg"/> 
+    </div>
+    <h1>Voting</h1>
+    <div>
+        <h2>Yo Yo Honey Singh :<span id="honeylike"></span></h2>
+        <h2>BadShah :<span id="badshahlikes"></span></h2>
+    </div>
+    <div>
+        <button id="honeybtn">Honey Singh</button>
+        <button id="badshahbtn">Badshah</button>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+      document.getElementById("honeybtn").addEventListener("click",honey)
+      var honeylikecount = parseInt(localStorage.getItem("honeylikes")) || 503;
+      document.getElementById("honeylike").textContent=honeylikecount;
+      
+      function honey(){
+          honeylikecount++;
+          console.log(honeylikecount);
+          localStorage.setItem("honeylikes",honeylikecount)
+          document.getElementById("honeylike").textContent=honeylikecount;
+          
+          
+      }
+      document.getElementById("badshahbtn").addEventListener("click",badshah)
+      var badshahlikecount= parseInt(localStorage.getItem("badshahlikes")) || 448;
+      document.getElementById("badshahlikes").textContent=badshahlikecount;
+
+      function badshah(){
+        badshahlikecount++;
+          console.log(badshahlikecount);
+          localStorage.setItem("badshahlikes",badshahlikecount)
+          document.getElementById("badshahlikes").textContent=badshahlikecount;
+          
+      }
+</script>
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch data</title>
+    <style>
+        form {
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            width: 200px;
+            height: auto;
+            padding: 10px;
+            margin: auto;
+            background-color: rgb(200, 241, 227);
+            background-color: linear gradient();
+        }
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            height: 25px;
+            border: 1px solid black;
+        }
+        button {
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px ;
+            margin-top: 10px;
+            cursor: pointer;
+            border:1px solid black;
+            padding: 10px;
+        }
+        button:hover {
+            background-color: black;
+            color: white;
+            transform: scale(1.05) 2s;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center; color: rgb(0, 81, 168);font-weight: 500;">FORM</h1>
+    <form>
+        <label for="">Name</label>
+        <br>
+        <input type="text" class="name1" placeholder="Name" required/>
+        <br>
+        <br>
+        <label for="">Age</label>
+        <br>
+        <input type="number" class="age1" placeholder="Age" required/>
+        <br>
+        <br>
+        <label for="">Email</label>
+        <br>
+        <input type="email" class="email1" placeholder="Email" required/>
+        <br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
+
+<script>
+    var form=document.querySelector("form")
+    form.addEventListener("submit",function(event){
+    event.preventDefault();
+
+    let name=document.querySelector(".name1").value;
+    let age=document.querySelector(".age1").value;
+    let email=document.querySelector(".email1").value;
+
+    localStorage.setItem("name",name);
+    localStorage.setItem("Age",age);
+    localStorage.setItem("Email",email);
+
+    console.log("Name:",name)
+    console.log("Age:",age)
+    console.log("Email:",email)
+    
+    form.reset()
+    })
+</script>

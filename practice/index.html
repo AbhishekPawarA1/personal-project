@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cards from js</title>
+    <script src="https://kit.fontawesome.com/a1a65dd321.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: white;
+        }
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);   
+            gap:20px;
+            padding: 10px;
+        }
+        #card {
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            padding: 10px;
+            border-radius: 7px;
+        }
+        #display {
+            display: flex;
+            justify-content: space-between;
+        }
+        #button {
+            padding: 10px;
+            background-color:rgb(33, 32, 32);
+            font-weight:700;
+            cursor: pointer;
+            color: white;
+            border: none;
+            transition: transform ;
+        }
+        #button:hover {
+            background-color: black;
+            transform: scale(1.05);
+        }
+        .fa-opencart{
+            font-size: 30px;
+            color: black;
+            margin-right: 100px;
+            transition: transform 1s ease-in-out;
+        }
+        .fa-opencart:hover{
+            transform: scale(1.2) translateX(70px);
+        }
+        .fa-toggle-on {
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .fa-toggle-off {
+            color:white;
+        }
+        @media (max-width:700px){
+            #container {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);   
+            gap:20px;
+            padding: 10px;
+        }
+        }
+        @media (max-width:400px){
+            #container {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);   
+            gap:20px;
+            padding: 10px;
+        }
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="display">
+    <h2 id="pro">Products</h2>
+    <h2><i class="fa-solid fa-toggle-on"></i></h2>
+    <h2><a href="./cards.html"><i class="fa-brands fa-opencart"></i></a></h2>
+    </div>
+    <div id="container">
+        <!-- Cards will be dynamically added here -->
+    </div>
+</body>
+</html>
+
+<script src="./index.js"></script>

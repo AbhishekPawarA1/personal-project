@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React vs Vanilla JS</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+  <h1>Virtual DOM vs Traditional DOM</h1>
+  <div id="react-app"></div>
+  <button id="vanillaButton">Change Title (Vanilla JS)</button>
+  <p id="vanillaCount">Vanilla JS DOM Updates: 0</p>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    function App() {
+      const [reactCount, setReactCount] = useState(0);
+
+      const handleReactChange = () => {
+        setReactCount(reactCount + 1);
+        document.title = `React Count: ${reactCount + 1}`;
+      };
+
+      return (
+        <div>
+          <button onClick={handleReactChange}>
+            Change Title (React)
+          </button>
+          <p>React DOM Updates: {reactCount}</p>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('react-app'));
+  </script>
+
+  <script>
+    // Vanilla JS Implementation
+    let vanillaCount = 0;
+
+    document.getElementById("vanillaButton").addEventListener("click", () => {
+      vanillaCount += 1;
+      document.title = `Vanilla Count: ${vanillaCount}`;
+      document.getElementById("vanillaCount").textContent = `Vanilla JS DOM Updates: ${vanillaCount}`;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React SPA</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      background-color: #f8f9fa;
+      padding: 1rem;
+    }
+    nav a {
+      margin: 0 15px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #007bff;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">React SPA with Dynamic Content</h1>
+  <div id="app"></div>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    function App() {
+      const [activePage, setActivePage] = useState("Home");
+
+      const renderContent = () => {
+        switch (activePage) {
+          case "Home":
+            return <p>Welcome to Home</p>;
+          case "About":
+            return <p>About Us: We build amazing SPAs!</p>;
+          case "Contact":
+            return <p>Contact Us at: contact@example.com</p>;
+          default:
+            return <p>Page not found!</p>;
+        }
+      };
+
+      return (
+        <div>
+          <nav>
+            <a onClick={() => setActivePage("Home")}>Home</a>
+            <a onClick={() => setActivePage("About")}>About</a>
+            <a onClick={() => setActivePage("Contact")}>Contact</a>
+          </nav>
+          <div className="content">
+            {renderContent()}
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById("app"));
+  </script>
+</body>
+</html>
